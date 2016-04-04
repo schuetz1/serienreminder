@@ -5,3 +5,13 @@ php bin/console series:import
 
 
 mysqldump serienreminder > serienreminder.sql
+
+
+cd Sites;
+cd mein-serienreminder;
+vagrant destroy;
+cd ..;
+rm -rf mein-serienreminder;
+git clone git@github.com:schuetz1/serienreminder.git mein-serienreminder;
+cd mein-serienreminder;
+vagrant up;
