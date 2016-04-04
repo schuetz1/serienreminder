@@ -1,4 +1,6 @@
 imports:
+    - { resource: parameters.yml }
+    - { resource: parameters_dev.yml }
     - { resource: config.yml }
 
 framework:
@@ -31,7 +33,4 @@ monolog:
         #    level:  info
 
 swiftmailer:
-    disable_delivery:  true
-    transport: gmail
-    username:  schuetz2011
-    password:  3Bundesliga
+    delivery_address: 'schuetz2011@gmail.com'

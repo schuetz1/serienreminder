@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: serienreminder
+    database_user: dev
+    database_password: dev
+    mailer_transport: sendmail
+    mailer_host:
+    mailer_user:
+    mailer_password:
+    secret: 6928c0587139a978537bbc80bec8578a652dc463

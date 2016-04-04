@@ -1,4 +1,7 @@
-fos-user-example
-================
+/etc/hosts
+192.168.33.10 scotchbox.local
 
-A Symfony project created on March 8, 2016, 6:53 pm.
+php bin/console series:import
+
+
+mysqldump serienreminder > serienreminder.sql
