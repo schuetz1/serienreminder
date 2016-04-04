@@ -2,3 +2,4 @@
 !/var/.gitkeep
 /vendor/
 /.vagrant/
+/app/bootstrap.php.cache
