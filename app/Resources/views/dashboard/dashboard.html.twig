@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mein Serienreminder</title>
+</head>
+<body>
+{% block topnav %}
+    {% include ':topnav-logged-in.html.twig' %}
+{% endblock %}
+
+<div class="container">
+    <div class="row">
+        <h2 style="margin-top:80px;"> Alle Serien im Überblick {{ 'getDayToday'|getDateToday }}</h2>
+        <form>
+            <input id="search"
+                   style="margin-bottom:30px;"
+                   type="search"
+                   class="form-control"
+                   placeholder="Serien durchsuchen..."
+                   autofocus>
+        </form>
+
+        <table class="table table-hover">
+            <tr>
+                <th>Sprache</th>
+                <th>Name</th>
+                <th>Staffel</th>
+                <th>Eschienen am</th>
+                <th>Weitere Informationen</th>
+            </tr>
+
+            {{ 'import Serien to table'|createTable }}
+
+        </table>
+    </div>
+</div>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+{% javascripts '@AppBundle/Resources/public/js/*' %}
+<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+
+{% stylesheets '@AppBundle/Resources/public/css/*' filter='cssrewrite' %}
+<link rel="stylesheet" href="{{ asset_url }}"/>
+{% endstylesheets %}
+</body>
+</html>
+
