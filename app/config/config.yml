@@ -71,24 +71,3 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: AppBundle\Entity\User
-    from_email:
-        address:        schuetz2011@gmail.com
-        sender_name:    Karsten
-    registration:
-        confirmation:
-            from_email:
-                address:        schuetz2011@gmail.com
-                sender_name:    Karsten
-            enabled:    true # change to false to disable registration email confirmation
-    resetting:
-        email:
-            from_email:
-                address:        schuetz2011@gmail.com
-                sender_name:    No Reply
-
-
-assetic:
-    debug:          '%kernel.debug%'
-    use_controller: '%kernel.debug%'
-    filters:
-        cssrewrite: ~

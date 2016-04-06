@@ -51,7 +51,8 @@ class NotifyService
                 $message = \Swift_Message::newInstance()
                     ->setSubject('Hello Email')
                     ->setFrom('schuetz2011@gmail.com')
-                    ->setTo($user->getEmail())
+                    //$user->getEmail()
+                    ->setTo('schuetz2011@gmail.com')
                     ->setBody(
                         $templating->render(
                             'emails/notify.html.twig',
