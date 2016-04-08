@@ -35,6 +35,7 @@ class DefaultController extends Controller
     }
 
     /**
+     * @Route("/", name="homepage")
      * @Route("/dashboard", name="dashboard")
      */
     public function dashboardAction(Request $request)
@@ -44,6 +45,7 @@ class DefaultController extends Controller
             ['series' => $this->getSeriesRepository()->findAllGroupedByName()]
         );
     }
+
 
 
     /**
@@ -60,9 +62,10 @@ class DefaultController extends Controller
 
         $subscription = new Subscription();
         $form = $this->createFormBuilder($subscription)
-            ->add('seriesId', ChoiceType::class, ['choices' => $options, 'label' => 'Serie'])
-            ->add('save', SubmitType::class, ['label' => 'Create Task'])
+            ->add('seriesId', ChoiceType::class, ['choices' => $options, 'label' => 'Serie', 'placeholder' => 'Wähle deine Lieblingsserie'])
+            ->add('save', SubmitType::class, ['label' => 'Für meine Serie eintragen'])
             ->getForm();
+
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
@@ -83,7 +86,6 @@ class DefaultController extends Controller
             ['form' => $form->createView()]
         );
     }
-
     /**
      * @return SeriesRepository
      */

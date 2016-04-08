@@ -1,5 +1,4 @@
 <?php
-
 namespace AppBundle\Command;
 
 use AppBundle\Service\ImportService;
