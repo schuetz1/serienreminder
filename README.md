@@ -7,11 +7,7 @@ php bin/console series:import
 mysqldump serienreminder > serienreminder.sql
 
 
-cd Sites;
-cd mein-serienreminder;
-vagrant destroy;
-cd ..;
-rm -rf mein-serienreminder;
-git clone git@github.com:schuetz1/serienreminder.git mein-serienreminder;
-cd mein-serienreminder;
-vagrant up;
+Serienreminder, bei dem der Nutzer sich über einen Registrations Bereich anmelden kann und dann auf ein Dashboard gelangt.
+Auf dem Dashboard kann er sich die Serien der letzten 2 Wochen anzeigen.
+Sollte ihn eine Serie besonders interessieren, kann er sich über die "Meine-Serien" für eine Serie
+eintragen und wird dann per Email benachrichtigt, sobald eine neue Serie erscheint.
