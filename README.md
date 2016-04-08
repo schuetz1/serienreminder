@@ -3,6 +3,7 @@
 
 php bin/console series:import
 
+php bin/console series:notify
 
 mysqldump serienreminder > serienreminder.sql
 
